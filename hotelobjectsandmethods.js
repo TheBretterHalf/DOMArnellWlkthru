@@ -68,6 +68,8 @@ document.getElementById("hotelname").innerText=hotel.name
 var hotelroomsafvaa ="<ul>";
 for (var i=0; i<hotel.roomNumbers.length;i++){
     hotelroomsafvaa +="<li>" + hotel.roomNumbers[i]+"</li>";
-    document.getElementById("rmsAvail").innerHTML = hotelroomsafvaa;
-    
+
 }
+
+hotelroomsafvaa += "</ul>"
+document.getElementById("rmsAvail").innerHTML = hotelroomsafvaa;
