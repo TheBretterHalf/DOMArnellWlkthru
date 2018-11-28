@@ -65,8 +65,9 @@ var hotel = {
     }
 };
 document.getElementById("hotelname").innerText=hotel.name
-var hotelroomsafvaa =[]
+var hotelroomsafvaa ="<ul>";
 for (var i=0; i<hotel.roomNumbers.length;i++){
-    hotelroomsafvaa = hotelroomsafvaa +" "+ hotel.roomNumbers[i];
-    document.getElementById("rmsAvail").innerText = hotelroomsafvaa
+    hotelroomsafvaa +="<li>" + hotel.roomNumbers[i]+"</li>";
+    document.getElementById("rmsAvail").innerHTML = hotelroomsafvaa;
+    
 }
