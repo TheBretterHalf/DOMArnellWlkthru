@@ -62,6 +62,9 @@ var hotel = {
         } else {
             console.log("No Rooms Booked")
         }
+    },
+    displayrooms: function(){
+        
     }
 };
 document.getElementById("hotelname").innerText=hotel.name
@@ -73,3 +76,6 @@ for (var i=0; i<hotel.roomNumbers.length;i++){
 
 hotelroomsafvaa += "</ul>"
 document.getElementById("rmsAvail").innerHTML = hotelroomsafvaa;
+//add button to book room and remove it from list
+//update rooms available list button
+//changing from an unordered list to a dropdown list
