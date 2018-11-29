@@ -63,8 +63,19 @@ var hotel = {
             console.log("No Rooms Booked")
         }
     },
-    displayrooms: function(){
-        
+    refreshrooms: function(){
+        var hotelroomsafvaa ="<ul>";
+        for (var i=0; i<hotel.roomNumbers.length;i++){
+            hotelroomsafvaa +="<li>" + hotel.roomNumbers[i]+"</li>";
+        }
+        hotelroomsafvaa += "</ul>";
+        document.getElementById("rmsAvail").innerHTML = hotelroomsafvaa;
+        var hotelrmsbooked = "<ul>";
+        for (var i=0; i<hotel.roomNumbersBooked.length; i++){
+            hotelrmsbooked +="<li>" + hotel.roomNumbersBooked[i]+"</li>";
+        }
+        hotelrmsbooked += "</ul>";
+        document.getElementById("rmBooked").innerHTML = hotelrmsbooked;
     }
 };
 document.getElementById("hotelname").innerText=hotel.name
@@ -76,6 +87,5 @@ for (var i=0; i<hotel.roomNumbers.length;i++){
 
 hotelroomsafvaa += "</ul>"
 document.getElementById("rmsAvail").innerHTML = hotelroomsafvaa;
-//add button to book room and remove it from list
-//update rooms available list button
+
 //changing from an unordered list to a dropdown list
