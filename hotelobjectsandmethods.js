@@ -88,4 +88,4 @@ for (var i=0; i<hotel.roomNumbers.length;i++){
 hotelroomsafvaa += "</ul>"
 document.getElementById("rmsAvail").innerHTML = hotelroomsafvaa;
 
-//changing from an unordered list to a dropdown list
+
