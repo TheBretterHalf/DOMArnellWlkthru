@@ -14,45 +14,17 @@
             .rooms {
                 color:thistle;
             }
-            .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-            
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f9f9f9;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                padding: 12px 16px;
-                z-index: 1;
-            }
-            
-            .dropdown:hover .dropdown-content {
-                display: block;
-            }
-            .spacer {
-                height:200px;
-            }
         </style>
     </head>
     <body>
         <h1 id="hotelname"></h1>
         <h3 id="slogan">Where You Pay With Code!</h3>
         <p>Code the night away, in our technology inspired rooms.</p>
-        
-        <div class="dropdown">
-            <h3 class="rooms">Rooms Available</h3>
-            <div id="rmsAvail" class="dropdown-content"></div>
-        </div>
-        <br>
-        <div class="dropdown">        
-            <h3 class="rooms">Rooms Booked</h3>
-            <div id="rmBooked" class="dropdown-content"></div>
-        </div>
-        <br>
-        <div class="spacer"></div>
+
+        <h3 class="rooms">Rooms Available</h3>
+        <div id="rmsAvail"></div>
+        <h3 class="rooms">Rooms Booked</h3>
+        <div id="rmBooked"></div>
         <button onclick="hotel.bookArandomroom();">Book A Room</button>
         <button onclick="hotel.refreshrooms();">Update Rooms</button>
     </body>

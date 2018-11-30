@@ -64,12 +64,14 @@ var hotel = {
         }
     },
     refreshrooms: function(){
-        var hotelroomsafvaa ="<ul>";
+        var hotelroomsafvaa ="<form><select id='rmsAvail'>";
         for (var i=0; i<hotel.roomNumbers.length;i++){
-            hotelroomsafvaa +="<li>" + hotel.roomNumbers[i]+"</li>";
+            //need to escape quotes on the following line, research escaping characters and quotes especially
+            hotelroomsafvaa +="<option value=\'"+hotel.roomNumbers[i]+"\'>"+hotel.roomNumbers[i]+"</option>";
         }
-        hotelroomsafvaa += "</ul>";
+        hotelroomsafvaa += "</select></form>";
         document.getElementById("rmsAvail").innerHTML = hotelroomsafvaa;
+        
         var hotelrmsbooked = "<ul>";
         for (var i=0; i<hotel.roomNumbersBooked.length; i++){
             hotelrmsbooked +="<li>" + hotel.roomNumbersBooked[i]+"</li>";
