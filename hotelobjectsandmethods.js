@@ -90,4 +90,5 @@ for (var i=0; i<hotel.roomNumbers.length;i++){
 hotelroomsafvaa += "</ul>"
 document.getElementById("rmsAvail").innerHTML = hotelroomsafvaa;
 
-
+//add select room
+//add display new page when room selected
