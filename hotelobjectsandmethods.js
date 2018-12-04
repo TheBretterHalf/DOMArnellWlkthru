@@ -64,31 +64,18 @@ var hotel = {
         }
     },
     refreshrooms: function(){
-        var hotelroomsafvaa ="<form><select id='rmsAvail'>";
+        var hotelroomsafvaa ="<form><select id='rmsAvailSelect'>";
         for (var i=0; i<hotel.roomNumbers.length;i++){
             //need to escape quotes on the following line, research escaping characters and quotes especially
             hotelroomsafvaa +="<option value=\'"+hotel.roomNumbers[i]+"\'>"+hotel.roomNumbers[i]+"</option>";
         }
         hotelroomsafvaa += "</select></form>";
         document.getElementById("rmsAvail").innerHTML = hotelroomsafvaa;
-        
-        var hotelrmsbooked = "<ul>";
-        for (var i=0; i<hotel.roomNumbersBooked.length; i++){
-            hotelrmsbooked +="<li>" + hotel.roomNumbersBooked[i]+"</li>";
-        }
-        hotelrmsbooked += "</ul>";
-        document.getElementById("rmBooked").innerHTML = hotelrmsbooked;
+    },
+    bookselectedroom: function(seat){
+        alert(document.getElementById("rmsAvailSelect").value);
     }
 };
-document.getElementById("hotelname").innerText=hotel.name
-var hotelroomsafvaa ="<ul>";
-for (var i=0; i<hotel.roomNumbers.length;i++){
-    hotelroomsafvaa +="<li>" + hotel.roomNumbers[i]+"</li>";
-
-}
-
-hotelroomsafvaa += "</ul>"
-document.getElementById("rmsAvail").innerHTML = hotelroomsafvaa;
 
 //add select room
 //add display new page when room selected
