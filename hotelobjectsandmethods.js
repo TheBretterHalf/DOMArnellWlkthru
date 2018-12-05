@@ -73,7 +73,14 @@ var hotel = {
         document.getElementById("rmsAvail").innerHTML = hotelroomsafvaa;
     },
     bookselectedroom: function(seat){
-        alert(document.getElementById("rmsAvailSelect").value);
+        for (let i=0;i<this.roomNumbers.length;i++){
+            if (document.getElementById("rmsAvailSelect").value==this.roomNumbers[i]){
+                this.roomNumbersBooked = this.roomNumbers.splice(i,1).concat(this.roomNumbersBooked);
+                document.getElementById("rmBooked").innerText=this.roomNumbersBooked;
+                hotel.refreshrooms()
+            }
+        }
+
     }
 };
 
