@@ -76,11 +76,21 @@ var hotel = {
         for (let i=0;i<this.roomNumbers.length;i++){
             if (document.getElementById("rmsAvailSelect").value==this.roomNumbers[i]){
                 this.roomNumbersBooked = this.roomNumbers.splice(i,1).concat(this.roomNumbersBooked);
-                document.getElementById("rmBooked").innerText=this.roomNumbersBooked;
-                hotel.refreshrooms()
+                document.getElementById("rmBooked").innerText =this.roomNumbersBooked;
+                this.refreshrooms();
+                this.bookArandomroom2();
             }
         }
 
+    },
+    bookArandomroom2: function(){
+        var hotelroomsbkd ="<form><select id='rmBooked'>";
+        for (var i=0; i<this.roomNumbersBooked.length;i++){
+            //need to escape quotes on the following line, research escaping characters and quotes especially
+            hotelroomsbkd +="<option value=\'"+this.roomNumbersBooked[i]+"\'>"+this.roomNumbersBooked[i]+"</option>";
+        }
+        hotelroomsbkd += "</select></form>";
+        document.getElementById("rmBooked").innerHTML = hotelroomsbkd;
     }
 };
 
