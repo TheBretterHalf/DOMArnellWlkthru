@@ -91,6 +91,9 @@ var hotel = {
         }
         hotelroomsbkd += "</select></form>";
         document.getElementById("rmBooked").innerHTML = hotelroomsbkd;
+    },
+    deselectroom: function(){
+        alert(document.getElementsB().value)
     }
 };
 
