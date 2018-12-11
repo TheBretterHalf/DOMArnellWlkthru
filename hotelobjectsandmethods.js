@@ -76,7 +76,7 @@ var hotel = {
         for (let i=0;i<this.roomNumbers.length;i++){
             if (document.getElementById("rmsAvailSelect").value==this.roomNumbers[i]){
                 this.roomNumbersBooked = this.roomNumbers.splice(i,1).concat(this.roomNumbersBooked);
-                document.getElementById("rmBooked").innerText =this.roomNumbersBooked;
+                document.getElementById("rmsBooked").innerText =this.roomNumbersBooked;
                 this.refreshrooms();
                 this.bookArandomroom2();
             }
@@ -90,10 +90,17 @@ var hotel = {
             hotelroomsbkd +="<option value=\'"+this.roomNumbersBooked[i]+"\'>"+this.roomNumbersBooked[i]+"</option>";
         }
         hotelroomsbkd += "</select></form>";
-        document.getElementById("rmBooked").innerHTML = hotelroomsbkd;
+        document.getElementById("rmsBooked").innerHTML = hotelroomsbkd;
     },
     deselectroom: function(){
-        alert(document.getElementsB().value)
+        if (this.roomNumbersBooked.length<1){
+            alert("There are no rooms in your cart!")
+        }
+        else{
+            for (let i=0;i<this.roomNumbersBooked.length;i++){
+                alert(document.getElementById("rmBooked").value)
+            }
+        }
     }
 };
 
