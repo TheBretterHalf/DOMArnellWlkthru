@@ -98,7 +98,11 @@ var hotel = {
         }
         else{
             for (let i=0;i<this.roomNumbersBooked.length;i++){
-                alert(document.getElementById("rmBooked").value)
+                if(document.getElementById("rmBooked").value==this.roomNumbersBooked[i]){
+                    this.roomNumbers=this.roomNumbersBooked.splice(i,1).concat(this.roomNumbers)
+                    this.refreshrooms();
+                    this.bookArandomroom2();
+                }
             }
         }
     }
